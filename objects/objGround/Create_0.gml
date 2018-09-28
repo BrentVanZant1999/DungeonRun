@@ -1,0 +1,1 @@
+groundType = 1; 

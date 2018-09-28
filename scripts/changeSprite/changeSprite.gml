@@ -1,0 +1,1 @@
+///changeSprite(charVal,isMoving);
