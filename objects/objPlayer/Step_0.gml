@@ -1,5 +1,6 @@
 var move_xinput = 0;
 var move_yinput = 0;
+depth = -2; 
 keysPressed = 0; 
 for ( var i = 0; i < array_length_1d(movement_inputs); i++){
     var this_key = movement_inputs[i];
@@ -20,13 +21,21 @@ if moving  {
 	var move_dir = point_direction(0,0,move_xinput,move_yinput);
 	if (isMoving == false) {
 		isMoving = true; 
-		if ( move_dir < 90 || move_dir > 270 ) {
+		if ( move_dir == 0 ) {
 			sprite_index = sprKnightRun1;
 			directionVal = 1; 
 		}
-		else if ( move_dir > 90 || move_dir < 270 ) {
+		else if ( move_dir == 180 ) {
 			sprite_index = sprKnightRun1Left;
 			directionVal = 3;
+		}
+		else if ( move_dir == 90 ) {
+			sprite_index = sprKnightRun1;
+			directionVal = 2; 
+		}
+		else if ( move_dir == 270 ) {
+			sprite_index = sprKnightRun1Left;
+			directionVal = 0;
 		}
 	}
     x += lengthdir_x(mySpeed, move_dir);
@@ -37,11 +46,15 @@ else {
 		isMoving = false; 
 		if ( directionVal == 1 ) {
 			sprite_index = sprKnightIdle;
-			directionVal = 0; 
 		}
 		else if ( directionVal == 3 ) {
 			sprite_index = sprKnightIdleLeft;
-			directionVal = 0;
+		}
+		else if ( directionVal == 2 ) {
+			sprite_index = sprKnightIdle;
+		}
+		else if ( directionVal == 0 ) {
+			sprite_index = sprKnightIdleLeft;
 		}
 		
 	}
