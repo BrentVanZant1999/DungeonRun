@@ -10,7 +10,7 @@ canUseAbility = true;
 
 //Stat handling
 charVal = 0;
-mySpeedBase = 6; 
+mySpeedBase = 4; 
 mySpeed = mySpeedBase;
 
 

@@ -14,10 +14,34 @@ for (var i = 0; i < roomSize; i++;) {
 		if ( j == 0 ) {
 			newWall = instance_create_depth(destX, destY,wallDepth,objWall); 
 			newWall.orientation = 2;
+			if ( i == 0 ) {
+				newWall.isCorner = true; 
+				newWall.cornerType = 2;	
+			}
+			if ( i == roomSize-1 ) {
+				newWall.isCorner = true; 
+				newWall.cornerType = 3;	
+			}
+		}
+		if ( i == 0 ) {
+			newWall = instance_create_depth(destX, destY,wallDepth,objWall); 
+			newWall.orientation = 3;
+		}
+		if ( i == roomSize-1 ) {
+			newWall = instance_create_depth(destX, destY,wallDepth,objWall); 
+			newWall.orientation = 1;
 		}
 		if ( j == roomSize-1 ) {
 			newWall = instance_create_depth(destX, destY,wallDepth,objWall); 
 			newWall.orientation = 0;
+			if ( i == 0 ) {
+				newWall.isCorner = true; 
+				newWall.cornerType = 0;	
+			}
+			if ( i == roomSize-1 ) {
+				newWall.isCorner = true; 
+				newWall.cornerType = 1;	
+			}
 		}
 	}
 }
