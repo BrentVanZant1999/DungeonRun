@@ -1,24 +1,13 @@
-//Movement Handling variables 
-isMoving = false;
-isFacingRight = false; 
-directionVal = 0; // 0 down, 1 right , 2 up, 3 left 
+//Generated for GMS2 in Geon FX v1.0b
+//Put this code in Create event
 
-//Ability Handling
-abilityTimer = 0;
-abilityCoolDown = 0;
-canUseAbility = true;
+//Handle Systerm
+myX = room_width/2; 
+myY = room_height/2;
+x = myX;
+y= myY - 300;
 
-//Stat handling
-charVal = 0;
-mySpeedBase = 4; 
-mySpeed = mySpeedBase;
+hasUsed = false; 
 
-
-//controller handling
-movement_inputs[0] = ord("D");
-movement_inputs[1] = ord("W");
-movement_inputs[2] = ord("A");
-movement_inputs[3] = ord("S");
-
-//animations
-image_speed = 1;
+myRadius = 10;
+jumpConstant = 10; 
