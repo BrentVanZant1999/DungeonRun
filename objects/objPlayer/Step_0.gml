@@ -1,3 +1,15 @@
-//Adjusting Emitter positions. Streaming or Bursting Particles.
-gravity_direction = point_direction(x,y,objBlackHole.x,objBlackHole.y); 
-gravity = 3;
+// Update position
+x = lengthdir_x(positionRadius, positionAngle) + centerX;
+y = lengthdir_y(positionRadius, positionAngle) + centerY;
+
+if (isFalling) {
+	accelerationVal +=accelerationAdd; 
+	if ( accelerationVal >= accelerationMaxVal ) { 
+			accelerationVal = accelerationMaxVal; 
+	}
+	positionRadius -=accelerationVal;
+}
+else {
+	positionRadius += jumpSpeed; 
+	positionAngle += jumpAngleSpeed;
+}

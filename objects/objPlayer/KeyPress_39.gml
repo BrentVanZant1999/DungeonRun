@@ -1,7 +1,7 @@
 /// @description Right Button Handling
 if (gravity_direction <=180 ) {
-	jumpAngle = gravity_direction+ jumpConstant; 
+	jump(1);
 }
 else {
-	jumpAngle = gravity_direction - jumpConstant;
+	jump(0);
 }
