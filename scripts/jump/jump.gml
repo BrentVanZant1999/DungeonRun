@@ -4,13 +4,11 @@
 isJumping = argument0; 
 if ( isJumping == 0 ) {
 	//left jump
-	isFalling = false;
-	alarm[1] = jumpTimer;
-	jumpAngleSpeed =-1;
+	direction = gravity_direction - 180; 
+	speed = 3;
 }
 else {
 	//right jump
-	isFalling = false; 
-	alarm[1] = jumpTimer;
-	jumpAngleSpeed =1;
+	direction = gravity_direction - 180; 
+	speed = 3;
 }

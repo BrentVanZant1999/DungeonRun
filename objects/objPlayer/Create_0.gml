@@ -14,6 +14,8 @@ myRadius = 10;
 
 positionRadius = 300;
 positionAngle = 0; 
+gravity_direction = 180; 
+gravity = 3; 
 
 //gravity stuffs
 isFalling = true;
