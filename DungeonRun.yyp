@@ -191,6 +191,14 @@
             }
         },
         {
+            "Key": "4957068b-97bc-408b-8cd6-5f31c31f4e9f",
+            "Value": {
+                "id": "8e6429a3-8bc3-4f0b-85e9-ad646d2d1407",
+                "resourcePath": "objects\\obj_gravityObj\\obj_gravityObj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4b63b40b-07cb-4ff4-8621-c0e354707113",
             "Value": {
                 "id": "2b5b7b75-2bde-497d-a342-78c900f3a0f7",

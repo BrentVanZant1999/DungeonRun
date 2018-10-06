@@ -1,0 +1,1 @@
+myGravity = 10; 
